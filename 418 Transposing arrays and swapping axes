@@ -1,0 +1,81 @@
+Python 2.7.3 |EPD_free 7.3-2 (32-bit)| (default, Apr 12 2012, 14:30:37) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> from numpy.random import randn
+>>> 
+>>> import numpy as np
+>>> np.set_printoptions(precision=4, suppress=True)
+>>> arr=np.arrange(15).reshape((3,5))
+
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    arr=np.arrange(15).reshape((3,5))
+AttributeError: 'module' object has no attribute 'arrange'
+>>> arr = np.arange(15).reshape((3, 5))
+>>> arr
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14]])
+>>> arr.T
+array([[ 0,  5, 10],
+       [ 1,  6, 11],
+       [ 2,  7, 12],
+       [ 3,  8, 13],
+       [ 4,  9, 14]])
+>>> arr=np.random.randn(6,3)
+>>> np.dot(arr.T,arr)
+array([[ 6.3896,  2.549 ,  1.5043],
+       [ 2.549 ,  8.873 , -1.3374],
+       [ 1.5043, -1.3374,  4.1895]])
+>>> arr
+array([[ 0.8973,  0.2383,  1.1941],
+       [ 0.7309,  0.3904, -1.043 ],
+       [-0.6243, -2.2446,  0.924 ],
+       [-0.4299, -1.9023, -0.4846],
+       [-1.2816,  0.0618, -0.609 ],
+       [-1.6832,  0.0535, -0.4653]])
+>>> arr=np.random.randn(6,3)
+>>> np.dot(arr.T,arr)
+array([[ 5.042 , -0.4422, -0.278 ],
+       [-0.4422,  5.1769, -1.774 ],
+       [-0.278 , -1.774 ,  1.5014]])
+>>> arr
+array([[-1.0279, -1.506 ,  0.3763],
+       [ 0.1866, -0.3847,  0.263 ],
+       [ 1.1354, -0.5207,  0.6632],
+       [ 1.1142,  0.1617, -0.7169],
+       [-1.1297,  0.9033,  0.0988],
+       [-0.3793,  1.2835, -0.5719]])
+>>> np.dot(arr.T,arr)
+array([[ 5.042 , -0.4422, -0.278 ],
+       [-0.4422,  5.1769, -1.774 ],
+       [-0.278 , -1.774 ,  1.5014]])
+>>> arr=np.arange(16).reshape((2,2,4))
+>>> arr
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7]],
+
+       [[ 8,  9, 10, 11],
+        [12, 13, 14, 15]]])
+>>> arr.transpose((1,0,2))
+array([[[ 0,  1,  2,  3],
+        [ 8,  9, 10, 11]],
+
+       [[ 4,  5,  6,  7],
+        [12, 13, 14, 15]]])
+>>> arr
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7]],
+
+       [[ 8,  9, 10, 11],
+        [12, 13, 14, 15]]])
+>>> arr.swapaxes(1,2)
+array([[[ 0,  4],
+        [ 1,  5],
+        [ 2,  6],
+        [ 3,  7]],
+
+       [[ 8, 12],
+        [ 9, 13],
+        [10, 14],
+        [11, 15]]])
+>>> 

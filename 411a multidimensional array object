@@ -1,0 +1,17 @@
+ from numpy.random import randn
+import numpy as np
+ np.set_printoptions(precision=4,suppress=True)
+ data=randn(2,3)
+data
+array([[ 0.3620283 ,  0.31619528,  0.51811126],
+       [-1.37627099,  1.30482704,  0.82289038]])
+data*10
+array([[  3.62028301,   3.16195279,   5.18111263],
+       [-13.76270986,  13.04827043,   8.22890381]])
+data+data
+array([[ 0.7240566 ,  0.63239056,  1.03622253],
+       [-2.75254197,  2.60965409,  1.64578076]])
+data.shape
+(2, 3)
+data.dtype
+dtype('float64')

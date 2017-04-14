@@ -1,0 +1,57 @@
+Python 2.7.3 |EPD_free 7.3-2 (32-bit)| (default, Apr 12 2012, 14:30:37) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> from numpy.random import randn
+>>> import numpy as np
+>>> np.set_printoptions(presion=4,suppress=True)
+
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    np.set_printoptions(presion=4,suppress=True)
+TypeError: set_printoptions() got an unexpected keyword argument 'presion'
+>>> np.set_printoptions(precision=4,suppress=True)
+>>> arr1 = np.array([1, 2, 3], dtype=np.float64)
+>>> arr2=np.array([1,2,3],dtype=np.int32)
+>>> arr1.dytype
+
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    arr1.dytype
+AttributeError: 'numpy.ndarray' object has no attribute 'dytype'
+>>> arr1.dtype
+dtype('float64')
+>>> arr2.dtype
+dtype('int32')
+>>> arr=np.array([1,2,3,4,5])
+>>> arr.dtype
+dtype('int32')
+>>> float_arr=arr.astype(np.float64)
+>>> float_arr.dtype
+dtype('float64')
+>>> arr = np.array([3.7, -1.2, -2.6, 0.5, 12.9, 10.1])
+>>> arr
+array([  3.7,  -1.2,  -2.6,   0.5,  12.9,  10.1])
+>>> arr.astype(np.int32)
+array([ 3, -1, -2,  0, 12, 10])
+>>> arr=np.array([1,2,3,4,5])
+>>> arr.dtype
+dtype('int32')
+>>> float_arr=arr.astype(np.float64)
+>>> float_arr
+array([ 1.,  2.,  3.,  4.,  5.])
+>>> numeric_strings = np.array(['1.25', '-9.6', '42'], dtype=np.string_)
+>>> numeric_strings.astype(float)
+array([  1.25,  -9.6 ,  42.  ])
+>>> empty_unit32=np.empty(8.dtype='u4')
+SyntaxError: invalid syntax
+>>> empty_unit32=np.empty(8,dtype='u4')
+>>> empty_unit32
+array([48431331, 48519928, 47526560, 48434304, 35026832, 40253744,
+              0, 48492360], dtype=uint32)
+>>> int_array=np.arange(10)
+>>> calibers=np.array([.22,.270,.357,.380,.44,.50],dtype=np.float64)
+>>> int_array.astype(calibers.dtype)
+array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9.])
+>>> empty_uint32 = np.empty(8, dtype='u4')
+>>> empty_uint32
+array([0, 0, 0, 0, 0, 0, 0, 0], dtype=uint32)
+>>> 

@@ -1,0 +1,28 @@
+Python 2.7.3 |EPD_free 7.3-2 (32-bit)| (default, Apr 12 2012, 14:30:37) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>>  from numpy.random import randn
+ 
+  File "<pyshell#0>", line 1
+    from numpy.random import randn
+   ^
+IndentationError: unexpected indent
+>>> from numpy.random import randn
+>>> import numpy as np
+>>> np.set_printoptions(precision=4, suppress=True)
+>>> arr=np.array([[1.,2.,3.],[4.,5.,6.]])
+>>> arr
+array([[ 1.,  2.,  3.],
+       [ 4.,  5.,  6.]])
+>>> arr*arr
+array([[  1.,   4.,   9.],
+       [ 16.,  25.,  36.]])
+>>> arr-arr
+array([[ 0.,  0.,  0.],
+       [ 0.,  0.,  0.]])
+>>> 1/arr
+array([[ 1.    ,  0.5   ,  0.3333],
+       [ 0.25  ,  0.2   ,  0.1667]])
+>>> arr**0.5
+array([[ 1.    ,  1.4142,  1.7321],
+       [ 2.    ,  2.2361,  2.4495]])
+>>> 
